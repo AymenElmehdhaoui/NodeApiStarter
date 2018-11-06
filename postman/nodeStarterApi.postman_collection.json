@@ -1,0 +1,913 @@
+{
+	"id": "8fd8f2aa-da6a-37e9-5b4a-957ad2ee2b12",
+	"name": "nodeStarterApi",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"owner": "5708191",
+			"lastUpdatedBy": "5708191",
+			"lastRevision": 5432574531,
+			"folder": null,
+			"id": "1bb4017a-9537-0fd4-ac81-2c0d431a5714",
+			"name": "Article",
+			"description": "",
+			"variables": null,
+			"auth": null,
+			"events": null,
+			"order": [
+				"6aaabc66-a04e-991f-3b51-e95b78c075b7",
+				"1164f852-f02c-bdc0-1bcc-153ca4f47588",
+				"d0bad66e-e035-2270-10ef-ba54e90cb231",
+				"36d64909-e259-9a9e-09aa-c901f39636c2",
+				"45141091-23bc-c21b-c796-716088efdffd"
+			],
+			"folders_order": []
+		},
+		{
+			"owner": "5708191",
+			"lastUpdatedBy": "5708191",
+			"lastRevision": 5390007447,
+			"folder": null,
+			"id": "5d929c4b-da6e-52a3-040e-ed4b5e4cb23a",
+			"name": "Auth",
+			"description": "",
+			"variables": null,
+			"auth": null,
+			"events": null,
+			"order": [
+				"ab4c03d0-f215-24dd-0bb5-dc3a79020c2a",
+				"bb97a115-d044-f750-09dd-e0f212aa3651",
+				"0ddaa83b-1a7f-6730-c22f-82976755ecc5",
+				"6e3a1982-4ec6-124a-f7db-364f5ea6e607",
+				"a8cb451e-db86-92dd-43fc-c2f0e1f1a02b",
+				"45ba9786-e41d-64ed-48bc-e45c913d8839"
+			],
+			"folders_order": []
+		},
+		{
+			"owner": "5708191",
+			"lastUpdatedBy": "5708191",
+			"lastRevision": 5432589392,
+			"folder": null,
+			"id": "ce66af1e-29cb-38bb-4df5-a1a6d918ba0b",
+			"name": "User",
+			"description": "",
+			"variables": null,
+			"auth": null,
+			"events": null,
+			"order": [
+				"5f0090fe-775a-1c38-76f1-1a5e28cba07f",
+				"30dee0a6-4194-81f8-6693-f89a7fa041cd",
+				"8ec28f40-1df0-79ec-880c-2597046fd944",
+				"019f9653-4413-8ad1-2647-41ce42ad1697",
+				"98b104bb-ee5b-b07c-10eb-4933894d1b99",
+				"19731814-c762-4bd5-6914-30ece102ee6d",
+				"7861c634-00f9-132e-d35b-058be7099faa",
+				"96058512-7abd-043e-794d-f9e4abe79b8a"
+			],
+			"folders_order": []
+		}
+	],
+	"folders_order": [
+		"5d929c4b-da6e-52a3-040e-ed4b5e4cb23a",
+		"1bb4017a-9537-0fd4-ac81-2c0d431a5714",
+		"ce66af1e-29cb-38bb-4df5-a1a6d918ba0b"
+	],
+	"timestamp": 0,
+	"owner": "5708191",
+	"public": false,
+	"requests": [
+		{
+			"id": "019f9653-4413-8ad1-2647-41ce42ad1697",
+			"headers": "x-auth: {{token}}\nContent-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "x-auth",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/api/v1/users/{{userID}}",
+			"folder": "ce66af1e-29cb-38bb-4df5-a1a6d918ba0b",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1541367603518,
+			"name": "Get user by id",
+			"description": "",
+			"collectionId": "8fd8f2aa-da6a-37e9-5b4a-957ad2ee2b12",
+			"responses": []
+		},
+		{
+			"folder": "5d929c4b-da6e-52a3-040e-ed4b5e4cb23a",
+			"id": "0ddaa83b-1a7f-6730-c22f-82976755ecc5",
+			"name": "Forgot password",
+			"dataMode": "urlencoded",
+			"data": [
+				{
+					"key": "email",
+					"value": "email@email.com",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": null,
+			"variables": null,
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"method": "POST",
+			"pathVariables": {},
+			"url": "{{url}}/api/v1/auth/forgot",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": null,
+			"helperAttributes": null,
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "8fd8f2aa-da6a-37e9-5b4a-957ad2ee2b12"
+		},
+		{
+			"folder": "1bb4017a-9537-0fd4-ac81-2c0d431a5714",
+			"id": "1164f852-f02c-bdc0-1bcc-153ca4f47588",
+			"name": "Update Article by ID",
+			"dataMode": "urlencoded",
+			"data": [
+				{
+					"key": "content",
+					"value": "this is the content",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": null,
+			"variables": null,
+			"headers": "x-auth: {{token}}\nContent-Type: application/x-www-form-urlencoded\n",
+			"method": "PUT",
+			"pathVariables": {},
+			"url": "{{url}}/api/v1/articles/{{articleID}}",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": null,
+			"helperAttributes": null,
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "x-auth",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "8fd8f2aa-da6a-37e9-5b4a-957ad2ee2b12"
+		},
+		{
+			"id": "19731814-c762-4bd5-6914-30ece102ee6d",
+			"headers": "x-auth: {{token}}\nContent-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "x-auth",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/api/v1/users/me",
+			"folder": "ce66af1e-29cb-38bb-4df5-a1a6d918ba0b",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1541367726669,
+			"name": "Get current user",
+			"description": "",
+			"collectionId": "8fd8f2aa-da6a-37e9-5b4a-957ad2ee2b12",
+			"responses": []
+		},
+		{
+			"id": "30dee0a6-4194-81f8-6693-f89a7fa041cd",
+			"headers": "x-auth: {{token}}\nContent-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "x-auth",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/api/v1/users",
+			"folder": "ce66af1e-29cb-38bb-4df5-a1a6d918ba0b",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "firstName",
+					"value": "firstName",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "lastName",
+					"value": "lastName",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "password",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "passwordConfirmation",
+					"value": "password",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "email@email1.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1541374551310,
+			"name": "Create user",
+			"description": "",
+			"collectionId": "8fd8f2aa-da6a-37e9-5b4a-957ad2ee2b12",
+			"responses": []
+		},
+		{
+			"folder": "1bb4017a-9537-0fd4-ac81-2c0d431a5714",
+			"id": "36d64909-e259-9a9e-09aa-c901f39636c2",
+			"name": "List articles",
+			"dataMode": "params",
+			"data": null,
+			"auth": null,
+			"events": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": null,
+			"variables": null,
+			"headers": "x-auth: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{url}}/api/v1/articles",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": null,
+			"helperAttributes": null,
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "x-auth",
+					"value": "{{token}}",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "8fd8f2aa-da6a-37e9-5b4a-957ad2ee2b12"
+		},
+		{
+			"folder": "1bb4017a-9537-0fd4-ac81-2c0d431a5714",
+			"id": "45141091-23bc-c21b-c796-716088efdffd",
+			"name": "Create article",
+			"dataMode": "urlencoded",
+			"data": [
+				{
+					"key": "title",
+					"value": "Article 1",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": null,
+			"variables": null,
+			"headers": "x-auth: {{token}}\nContent-Type: application/x-www-form-urlencoded\n",
+			"method": "POST",
+			"pathVariables": {},
+			"url": "{{url}}/api/v1/articles",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": null,
+			"helperAttributes": null,
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "x-auth",
+					"value": "{{token}}",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "8fd8f2aa-da6a-37e9-5b4a-957ad2ee2b12"
+		},
+		{
+			"folder": "5d929c4b-da6e-52a3-040e-ed4b5e4cb23a",
+			"id": "45ba9786-e41d-64ed-48bc-e45c913d8839",
+			"name": "Confirmation user",
+			"dataMode": "urlencoded",
+			"data": [],
+			"auth": null,
+			"events": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": null,
+			"variables": null,
+			"headers": "Content-Type: application/x-www-form-urlencoded\nx-auth: {{token}}\n",
+			"method": "PATCH",
+			"pathVariables": {},
+			"url": "{{url}}/api/v1/auth/confirmation/{{userID}}",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": null,
+			"helperAttributes": null,
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "x-auth",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "8fd8f2aa-da6a-37e9-5b4a-957ad2ee2b12"
+		},
+		{
+			"id": "5f0090fe-775a-1c38-76f1-1a5e28cba07f",
+			"headers": "x-auth: {{token}}\n",
+			"headerData": [
+				{
+					"key": "x-auth",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/api/v1/users",
+			"folder": "ce66af1e-29cb-38bb-4df5-a1a6d918ba0b",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1541367447366,
+			"name": "List of users",
+			"description": "",
+			"collectionId": "8fd8f2aa-da6a-37e9-5b4a-957ad2ee2b12",
+			"responses": []
+		},
+		{
+			"folder": "1bb4017a-9537-0fd4-ac81-2c0d431a5714",
+			"id": "6aaabc66-a04e-991f-3b51-e95b78c075b7",
+			"name": "Get Article by ID",
+			"dataMode": "params",
+			"data": null,
+			"auth": null,
+			"events": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": null,
+			"variables": null,
+			"headers": "x-auth: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{url}}/api/v1/articles/{{articleID}}",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": null,
+			"helperAttributes": null,
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "x-auth",
+					"value": "{{token}}",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "8fd8f2aa-da6a-37e9-5b4a-957ad2ee2b12"
+		},
+		{
+			"folder": "5d929c4b-da6e-52a3-040e-ed4b5e4cb23a",
+			"id": "6e3a1982-4ec6-124a-f7db-364f5ea6e607",
+			"name": "Reset password",
+			"dataMode": "urlencoded",
+			"data": [
+				{
+					"key": "newPassword",
+					"value": "password",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "verifyPassword",
+					"value": "password",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": null,
+			"variables": null,
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"method": "PATCH",
+			"pathVariables": {},
+			"url": "{{url}}/api/v1/auth/password/reset/{{resetPasswordToken}}",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": null,
+			"helperAttributes": null,
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "8fd8f2aa-da6a-37e9-5b4a-957ad2ee2b12"
+		},
+		{
+			"id": "7861c634-00f9-132e-d35b-058be7099faa",
+			"headers": "x-auth: {{token}}\nContent-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "x-auth",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/api/v1/users/me",
+			"folder": "ce66af1e-29cb-38bb-4df5-a1a6d918ba0b",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PATCH",
+			"data": [
+				{
+					"key": "firstName",
+					"value": "aymen",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "password",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "email",
+					"value": "email@email.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "lastName",
+					"value": "lastName",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1541373380894,
+			"name": "Update current user",
+			"description": "",
+			"collectionId": "8fd8f2aa-da6a-37e9-5b4a-957ad2ee2b12",
+			"responses": []
+		},
+		{
+			"id": "8ec28f40-1df0-79ec-880c-2597046fd944",
+			"headers": "x-auth: {{token}}\nContent-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "x-auth",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/api/v1/users/{{userID}}",
+			"folder": "ce66af1e-29cb-38bb-4df5-a1a6d918ba0b",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PATCH",
+			"data": [
+				{
+					"key": "firstName",
+					"value": "firstName",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "lastName",
+					"value": "lastName",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "password",
+					"value": "password",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "passwordConfirmation",
+					"value": "password",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "email",
+					"value": "email@email.com",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1541374537669,
+			"name": "Update user",
+			"description": "",
+			"collectionId": "8fd8f2aa-da6a-37e9-5b4a-957ad2ee2b12",
+			"responses": []
+		},
+		{
+			"id": "96058512-7abd-043e-794d-f9e4abe79b8a",
+			"headers": "x-auth: {{token}}\nContent-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "x-auth",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/api/v1/users/me",
+			"folder": "ce66af1e-29cb-38bb-4df5-a1a6d918ba0b",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1541373652503,
+			"name": "Delete current user",
+			"description": "",
+			"collectionId": "8fd8f2aa-da6a-37e9-5b4a-957ad2ee2b12",
+			"responses": []
+		},
+		{
+			"id": "98b104bb-ee5b-b07c-10eb-4933894d1b99",
+			"headers": "x-auth: {{token}}\nContent-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "x-auth",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/api/v1/users/{{userID}}",
+			"folder": "ce66af1e-29cb-38bb-4df5-a1a6d918ba0b",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1541374622246,
+			"name": "Delete user by id",
+			"description": "",
+			"collectionId": "8fd8f2aa-da6a-37e9-5b4a-957ad2ee2b12",
+			"responses": []
+		},
+		{
+			"folder": "5d929c4b-da6e-52a3-040e-ed4b5e4cb23a",
+			"id": "a8cb451e-db86-92dd-43fc-c2f0e1f1a02b",
+			"name": "Confirmation request",
+			"dataMode": "urlencoded",
+			"data": [],
+			"auth": null,
+			"events": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": null,
+			"variables": null,
+			"headers": "Content-Type: application/x-www-form-urlencoded\nx-auth: {{token}}\n",
+			"method": "POST",
+			"pathVariables": {},
+			"url": "{{url}}/api/v1/auth/confirmation",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": null,
+			"helperAttributes": null,
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "x-auth",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "8fd8f2aa-da6a-37e9-5b4a-957ad2ee2b12"
+		},
+		{
+			"folder": "5d929c4b-da6e-52a3-040e-ed4b5e4cb23a",
+			"id": "ab4c03d0-f215-24dd-0bb5-dc3a79020c2a",
+			"name": "Sign in",
+			"dataMode": "urlencoded",
+			"data": [
+				{
+					"key": "email",
+					"value": "email@email.com",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "password",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": null,
+			"variables": null,
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"method": "POST",
+			"pathVariables": {},
+			"url": "{{url}}/api/v1/auth/signin",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": null,
+			"helperAttributes": null,
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "8fd8f2aa-da6a-37e9-5b4a-957ad2ee2b12"
+		},
+		{
+			"folder": "5d929c4b-da6e-52a3-040e-ed4b5e4cb23a",
+			"id": "bb97a115-d044-f750-09dd-e0f212aa3651",
+			"name": "Sign up",
+			"dataMode": "urlencoded",
+			"data": [
+				{
+					"key": "firstName",
+					"value": "firstName",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "lastName",
+					"value": "lastName",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "password",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "email@email.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "passwordConfirmation",
+					"value": "password",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": null,
+			"variables": null,
+			"headers": "",
+			"method": "POST",
+			"pathVariables": {},
+			"url": "{{url}}/api/v1/auth/signup",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": null,
+			"helperAttributes": null,
+			"queryParams": [],
+			"headerData": [],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "8fd8f2aa-da6a-37e9-5b4a-957ad2ee2b12"
+		},
+		{
+			"folder": "1bb4017a-9537-0fd4-ac81-2c0d431a5714",
+			"id": "d0bad66e-e035-2270-10ef-ba54e90cb231",
+			"name": "Delete Article by ID",
+			"dataMode": "params",
+			"data": null,
+			"auth": null,
+			"events": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": null,
+			"variables": null,
+			"headers": "x-auth: {{token}}\n",
+			"method": "DELETE",
+			"pathVariables": {},
+			"url": "{{url}}/api/v1/articles/{{articleID}}",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": null,
+			"helperAttributes": null,
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "x-auth",
+					"value": "{{token}}",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "8fd8f2aa-da6a-37e9-5b4a-957ad2ee2b12"
+		}
+	]
+}
