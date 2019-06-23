@@ -25,6 +25,7 @@ import { DIContainerClass } from "../../middlewares/DIContainer";
 import { IExpress } from "./IExpress";
 import { IInitRoutes } from "../../routes/IInit.routes";
 import { IInitPolicies } from "../../middlewares/policies/IInit.policies";
+import { IHelmetHstsConfiguration } from "helmet";
 
 @injectable()
 export default class InitExpress implements IExpress {
@@ -147,9 +148,9 @@ export default class InitExpress implements IExpress {
         this.app.use(helmet.ieNoOpen());
         this.app.use(helmet.hsts({
             maxAge: SIX_MONTHS,
-            includeSubdomains: true,
+            includeSubDomains: true,
             force: true
-        }));
+        } as IHelmetHstsConfiguration));
         this.app.disable("x-powered-by");
     }
 
