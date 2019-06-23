@@ -2,6 +2,7 @@ import { injectable } from "inversify";
 
 import { BasePolicy } from "../Base/Base.policy";
 import { IAuthPolicy } from "./IAuth.policy";
+import { USERNOTCONFIRMED } from "../../../config/roles.config";
 
 @injectable()
 export class AuthPolicy extends BasePolicy implements IAuthPolicy {
@@ -13,7 +14,7 @@ export class AuthPolicy extends BasePolicy implements IAuthPolicy {
         this.aclInstance.allow(
             [
                 {
-                    roles: ["userNotConfirmed"],
+                    roles: [USERNOTCONFIRMED],
                     allows: [
                         {
                             resources: this.url.concat("/confirmation"),

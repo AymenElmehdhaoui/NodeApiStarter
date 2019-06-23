@@ -4,6 +4,7 @@ import { NextFunction, Response } from "express";
 import { IRequest } from "../../helpers/IRequest.interface";
 import { AclInstance } from "../../helpers/acl.instance";
 import { IAccessPolicy } from "./IAccess.policy";
+import { GUEST } from "../../../config/roles.config";
 
 export class AccessPolicy implements IAccessPolicy {
     isAllowed(req: IRequest, res: Response, next: NextFunction): void {
@@ -18,7 +19,7 @@ export class AccessPolicy implements IAccessPolicy {
             }
         }
 
-        const roles = req.user ? req.user.roles : ["guest"];
+        const roles = req.user ? req.user.roles : [GUEST];
         const aclInstance = AclInstance.getAclInstance();
         const url = process.env.API_ROOT.concat(req.route.path);
 

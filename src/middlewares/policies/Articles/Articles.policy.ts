@@ -1,5 +1,6 @@
 import { BasePolicy } from "../Base/Base.policy";
 import { IArticlesPolicy } from "./IArticles.policy";
+import { ADMIN, GUEST, USER } from "../../../config/roles.config";
 
 export class ArticlesPolicy extends BasePolicy implements IArticlesPolicy {
     constructor() {
@@ -9,7 +10,7 @@ export class ArticlesPolicy extends BasePolicy implements IArticlesPolicy {
     public invokeRolesPolicies(): void {
 
         this.aclInstance.allow([{
-                roles: ["admin"],
+                roles: [ADMIN],
                 allows: [
                     {
                         resources: this.url,
@@ -22,7 +23,7 @@ export class ArticlesPolicy extends BasePolicy implements IArticlesPolicy {
                 ]
             },
                 {
-                    roles: ["user"],
+                    roles: [USER],
                     allows: [
                         {
                             resources: this.url,
@@ -35,7 +36,7 @@ export class ArticlesPolicy extends BasePolicy implements IArticlesPolicy {
                     ]
                 },
                 {
-                    roles: ["guest"],
+                    roles: [GUEST],
                     allows: [
                         {
                             resources: this.url,

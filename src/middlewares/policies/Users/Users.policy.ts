@@ -1,6 +1,7 @@
 import { BasePolicy } from "../Base/Base.policy";
 import { IUsersPolicy } from "./IUsers.policy";
 import { injectable } from "inversify";
+import { ADMIN, USER, USERNOTCONFIRMED } from "../../../config/roles.config";
 
 @injectable()
 export class UsersPolicy extends BasePolicy implements IUsersPolicy {
@@ -12,7 +13,7 @@ export class UsersPolicy extends BasePolicy implements IUsersPolicy {
         this.aclInstance.allow(
             [
                 {
-                    roles: ["admin"],
+                    roles: [ADMIN],
                     allows: [
                         {resources: this.url, permissions: ["get", "post"]},
                         {
@@ -22,7 +23,7 @@ export class UsersPolicy extends BasePolicy implements IUsersPolicy {
                     ]
                 },
                 {
-                    roles: ["admin", "user", "userNotConfirmed"],
+                    roles: [ADMIN, USER, USERNOTCONFIRMED],
                     allows: [
                         {resources: this.url.concat("/me"), permissions: ["get", "patch", "delete"]},
                     ]

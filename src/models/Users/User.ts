@@ -11,6 +11,7 @@ import uniqueValidator from "mongoose-unique-validator";
 import { IUserModel } from "./Interfaces/IUser.model";
 import { IUser } from "./Interfaces/IUser";
 import { IUserDocument } from "./Interfaces/IUser.document";
+import { ADMIN, USER, USERNOTCONFIRMED } from "../../config/roles.config";
 
 /**
  * User Schema
@@ -50,9 +51,9 @@ export let UserSchema: Schema = new Schema({
         roles: {
             type: [{
                 type: String,
-                enum: ["userNotConfirmed", "user", "admin"]
+                enum: [USERNOTCONFIRMED, USER, ADMIN]
             }],
-            default: ["userNotConfirmed"],
+            default: [USERNOTCONFIRMED],
             required: "Please provide at least one role"
         },
         isConfirmed: {

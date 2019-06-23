@@ -11,6 +11,7 @@ import { IUser } from "../../models/Users/Interfaces/IUser";
 import Options from "../../config/Options";
 import { IAuthController } from "./IAuthController";
 import Mail = require("nodemailer/lib/mailer");
+import { USER } from "../../config/roles.config";
 
 const {TYPES} = Options;
 
@@ -174,7 +175,7 @@ export class AuthController implements IAuthController {
         User.findById(userID)
             .then((user: IUser) => {
                 if (!user.isConfirmed) {
-                    user.roles = ["user"];
+                    user.roles = [USER];
                     user.isConfirmed = true;
                     user.save()
                         .then(() => {
