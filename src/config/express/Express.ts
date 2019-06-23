@@ -4,7 +4,7 @@ import methodOverride from "method-override";
 import helmet from "helmet";
 import compression from "compression";
 import winston from "winston";
-import RateLimit from "express-rate-limit";
+import rateLimit from "express-rate-limit";
 import express, { Router } from "express";
 import chalk from "chalk";
 import http from "http";
@@ -129,7 +129,7 @@ export default class InitExpress implements IExpress {
             // only if you're behind a reverse proxy (Heroku, Bluemix, AWS if you use an ELB, custom Nginx setup, etc)
             // this.app.enable("trust proxy");
 
-            const apiLimiter = new RateLimit(
+            const apiLimiter = new rateLimit(
                 Options.apiLimiterOptions
             );
 

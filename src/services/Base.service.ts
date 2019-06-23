@@ -69,7 +69,7 @@ export class BaseService implements IBaseService {
 
         this.schema.deleteOne({_id: toDelete._id})
             .then(
-                (result: Document) => res.send(result)
+                (result: any) => res.send(result)
             )
             .catch(
                 (err: Error) => {
